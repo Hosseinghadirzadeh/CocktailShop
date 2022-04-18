@@ -233,15 +233,17 @@ header {
         }
     }
 }
-
-main {
-    position: relative;
+.border {
     width: 84%;
     border-left: 1px solid $gcolor;
     border-right: 1px solid $gcolor;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+}
+main {
+    position: relative;
+    @extend .border;
     min-height: 260vh;
 
     .liner {
@@ -500,21 +502,21 @@ main {
         img {
             width: 100%;
         }
-        &:hover>div{
+        &:hover > div {
             height: 230px;
         }
         div {
             position: absolute;
-            background-color: rgb(15,29,34);
+            background-color: rgb(15, 29, 34);
             width: 80%;
             height: 0px;
             top: 0;
             left: 0;
             transform: translate(12%, 15%);
-            transition: all .5s;
+            transition: all 0.5s;
             overflow: hidden;
             @extend .df;
-            >button{
+            > button {
                 width: 80%;
             }
         }
@@ -543,5 +545,22 @@ main {
             letter-spacing: 3px;
             text-transform: uppercase;
         }
+    }
+}
+
+// =================footer=================
+
+footer {
+    min-height: 80vh;
+    border-top: 1px solid $gcolor;
+    width: 100%;
+    .inner-footer {
+        @extend .border;
+        position: relative;
+        .liner {
+            border: 1px solid $linerColor;
+            min-height: 80vh;
+        }
+
     }
 }

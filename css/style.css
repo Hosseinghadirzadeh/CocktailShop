@@ -231,8 +231,7 @@ header .menu > section > div:nth-of-type(4) {
   right: 15px;
 }
 
-main {
-  position: relative;
+.border, main, footer .inner-footer {
   width: 84%;
   border-left: 1px solid #715b3e;
   border-right: 1px solid #715b3e;
@@ -241,6 +240,10 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
+}
+
+main {
+  position: relative;
   min-height: 260vh;
 }
 
@@ -532,8 +535,8 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
   left: 0;
   -webkit-transform: translate(12%, 15%);
           transform: translate(12%, 15%);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   overflow: hidden;
 }
 
@@ -572,5 +575,20 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
 .card > div p {
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+footer {
+  min-height: 80vh;
+  border-top: 1px solid #715b3e;
+  width: 100%;
+}
+
+footer .inner-footer {
+  position: relative;
+}
+
+footer .inner-footer .liner {
+  border: 1px solid #21221e;
+  min-height: 80vh;
 }
 /*# sourceMappingURL=style.css.map */
