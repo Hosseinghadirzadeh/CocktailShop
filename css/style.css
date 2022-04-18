@@ -14,11 +14,11 @@ li {
   list-style-type: none;
 }
 
-.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div, .row2, .row2-1, .row2-1 > ul, .row2-1 > ul > li, .row2-1 > ul > ul {
+.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div, .row2, .row2-1, .row2-1 > ul, .row2-1 > ul > li, .row2-1 > ul > ul, .row2-2, .row2-2 > h2, .row2-2 > div, .row2-2 > div > article, .card > figure, .card > div {
   border: 1px solid red;
 }
 
-.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div, .row2-1 > ul, .row2-1 p {
+.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div, .row2-1 > ul, .row2-1 p, .row2-2 > div, .card > figure div, .card > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@ li {
       align-content: center;
 }
 
-.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc > div > p, .row2-1, .row2-1 p {
+.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc > div > p, .row2-1, .row2-1 p, .row2-2 > h2, .row2-2 > div > article {
   font-family: "Dancing Script", cursive;
   font-family: "Roboto Mono", monospace;
   font-family: "Satisfy", cursive;
@@ -241,7 +241,7 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  min-height: 220vh;
+  min-height: 260vh;
 }
 
 main .liner {
@@ -425,10 +425,10 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
   min-height: 840px;
   position: absolute;
   top: calc(100vh + 60px);
+  margin-top: 10%;
 }
 
 .row2-1 {
-  min-height: 255px;
   width: 70%;
   margin: 0 auto;
   color: white;
@@ -482,5 +482,95 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
   text-align: center;
   padding: 20px;
   font-size: 18px;
+}
+
+.row2-2 {
+  width: 100%;
+  min-height: 75vh;
+  margin-top: 80px;
+}
+
+.row2-2 > h2 {
+  width: 100%;
+  color: #c9ab81;
+  padding: 30px;
+  letter-spacing: 4px;
+}
+
+.row2-2 > div {
+  width: 100%;
+  min-height: 65vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.row2-2 > div > article {
+  min-height: 65vh;
+  width: 23%;
+}
+
+.card > figure {
+  width: 100%;
+  position: relative;
+}
+
+.card > figure img {
+  width: 100%;
+}
+
+.card > figure:hover > div {
+  height: 230px;
+}
+
+.card > figure div {
+  position: absolute;
+  background-color: #0f1d22;
+  width: 80%;
+  height: 0px;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(12%, 15%);
+          transform: translate(12%, 15%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.card > figure div > button {
+  width: 80%;
+}
+
+.card > div {
+  width: 100%;
+  color: #c9ab81;
+}
+
+.card > div * {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.card > div .star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #afb8b8;
+}
+
+.card > div .star i {
+  padding: 0 !important;
+  font-size: 14px;
+  width: 6%;
+}
+
+.card > div p {
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
