@@ -14,11 +14,11 @@ li {
   list-style-type: none;
 }
 
-.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div {
+.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div, .row2, .row2-1, .row2-1 > ul, .row2-1 > ul > li, .row2-1 > ul > ul {
   border: 1px solid red;
 }
 
-.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div {
+.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div, .row2-1 > ul, .row2-1 p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@ li {
       align-content: center;
 }
 
-.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc > div > p {
+.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc > div > p, .row2-1, .row2-1 p {
   font-family: "Dancing Script", cursive;
   font-family: "Roboto Mono", monospace;
   font-family: "Satisfy", cursive;
@@ -241,7 +241,7 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  min-height: 200vh;
+  min-height: 220vh;
 }
 
 main .liner {
@@ -296,7 +296,7 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
           justify-content: space-evenly;
   position: absolute;
   top: 50px;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   margin-top: 50px;
 }
 
@@ -418,5 +418,69 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
 .row1 > .text .desc > div > p > span:hover {
   color: #c9ab81;
   cursor: pointer;
+}
+
+.row2 {
+  width: 100%;
+  min-height: 840px;
+  position: absolute;
+  top: calc(100vh + 60px);
+}
+
+.row2-1 {
+  min-height: 255px;
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+}
+
+.row2-1 > ul {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px;
+  letter-spacing: 4px;
+}
+
+.row2-1 > ul > li {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.row2-1 > ul > li:nth-of-type(1):hover ~ .label > li {
+  left: 0;
+}
+
+.row2-1 > ul > li:nth-of-type(2):hover ~ .label > li {
+  left: 33%;
+  width: 36%;
+}
+
+.row2-1 > ul > li:nth-of-type(3):hover ~ .label > li {
+  left: 70.5%;
+}
+
+.row2-1 > ul > ul {
+  height: 1px;
+  width: 100%;
+  border: 1px solid #516268;
+  margin-top: 2%;
+  position: relative;
+}
+
+.row2-1 > ul > ul li {
+  position: absolute;
+  background-color: #c9ab81;
+  width: 30%;
+  height: 2px;
+  top: -1px;
+  left: 0;
+  -webkit-transition: all 1s !important;
+  transition: all 1s !important;
+}
+
+.row2-1 p {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */

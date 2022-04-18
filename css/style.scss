@@ -242,7 +242,7 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    min-height: 200vh;
+    min-height: 220vh;
 
     .liner {
         border: 1px solid $linerColor;
@@ -296,7 +296,7 @@ main {
     justify-content: space-evenly;
     position: absolute;
     top: 50px;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     margin-top: 50px;
 
     > figure {
@@ -405,5 +405,66 @@ main {
                 }
             }
         }
+    }
+}
+.row2 {
+    width: 100%;
+    min-height: 840px;
+    position: absolute;
+    @extend .bt;
+    top: calc(100vh + 60px);
+}
+
+.row2-1 {
+    min-height: 255px;
+    @extend .bt, .FONT;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    > ul {
+        @extend .bt, .df;
+        justify-content: space-around;
+        padding: 20px;
+        letter-spacing: 4px;
+
+        > li {
+            @extend .bt;
+            font-size: 20px;
+            cursor: pointer;
+      
+            &:nth-of-type(1):hover ~ .label > li {
+                left: 0;
+               
+            }
+            &:nth-of-type(2):hover ~ .label > li {
+                left: 33%;
+                width: 36%;
+            }
+            &:nth-of-type(3):hover ~ .label > li {
+                left: 70.5%;
+            }
+        }
+        > ul {
+            height: 1px;
+            width: 100%;
+            @extend .bt;
+            border:1px solid rgb(81,98,104) ;
+            margin-top: 2%;
+            position: relative;
+            li {
+                position: absolute;
+                background-color: $gcolor2;
+                width: 30%;
+                height: 2px;
+                top: -1px;left: 0;
+                transition: all 1s !important;
+            }
+        }
+    }
+    p{
+        @extend .FONT,.df;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
     }
 }
