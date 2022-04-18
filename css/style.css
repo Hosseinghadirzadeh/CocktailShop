@@ -14,11 +14,11 @@ li {
   list-style-type: none;
 }
 
-.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure {
+.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1) {
   border: 1px solid red;
 }
 
-.df, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1 > figure {
+.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text > section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,10 +34,58 @@ li {
       align-content: center;
 }
 
-.FONT, header > nav > ul, main .main-top {
-  font-family: 'Dancing Script', cursive;
-  font-family: 'Roboto Mono', monospace;
-  font-family: 'Satisfy', cursive;
+.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1) {
+  font-family: "Dancing Script", cursive;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Satisfy", cursive;
+}
+
+.btn {
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #c5a87f;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+  width: 35%;
+  cursor: pointer;
+}
+
+.btn::before, .btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 0;
+  right: 71%;
+  background-color: #c9ab81;
+  -webkit-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: rotate(-22deg);
+          transform: rotate(-22deg);
+  z-index: 0;
+}
+
+.btn::after {
+  left: 71%;
+  bottom: 0px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-22deg);
+          transform: rotate(-22deg);
+  top: unset;
+}
+
+:hover > .btn::before,
+:hover > .btn::after {
+  width: 31%;
 }
 
 .main {
@@ -96,7 +144,7 @@ header > nav > ul li > a:hover::before, header > nav > ul li > a:hover::after {
 }
 
 header > nav > ul li > a::before, header > nav > ul li > a::after {
-  content: '';
+  content: "";
   background-color: #c9ab81;
   width: 0%;
   height: 2px;
@@ -104,15 +152,15 @@ header > nav > ul li > a::before, header > nav > ul li > a::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-transition: all .7s;
-  transition: all .7s;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 header > nav > ul li > a::after {
   bottom: 4px;
   left: 0;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 header > nav > section {
@@ -160,8 +208,8 @@ header .menu > section > div {
   background-color: #c9ab81;
   width: 40%;
   position: absolute;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 header .menu > section > div:nth-of-type(1) {
@@ -224,8 +272,8 @@ main .main-top > ul {
 main .main-top > ul > li {
   font-size: 18px;
   padding: 5px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   cursor: pointer;
 }
 
@@ -244,6 +292,9 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
 .row1 {
   width: 100%;
   min-height: calc(100vh - 50px);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   position: absolute;
   top: 50px;
   padding: 10px;
@@ -258,5 +309,63 @@ main .main-top > ul > li:nth-last-of-type(1):hover {
 
 .row1 > figure > img {
   width: 100%;
+}
+
+.row1 > .text {
+  color: white;
+  width: 47%;
+  padding: 45px 20px 25px 20px;
+  height: calc(100vh - 50px);
+}
+
+.row1 > .text > * {
+  width: 100%;
+}
+
+.row1 > .text > div:nth-of-type(1) > h2 {
+  font-size: 40px;
+  color: #c9ab81;
+  letter-spacing: 8px;
+  padding: 8px;
+}
+
+.row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)) {
+  font-size: 20px;
+  color: #c9ab81;
+  letter-spacing: 2px;
+  padding: 15px 10px;
+}
+
+.row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1) {
+  font-size: 20px;
+  padding: 15px;
+}
+
+.row1 > .text > section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 20px 15px;
+}
+
+.row1 > .text > section > button {
+  margin-left: 20px;
+  height: 41px;
+}
+
+.row1 > .text > section > input {
+  outline: none;
+  border: 1px solid #715b3e;
+  background-color: transparent;
+  color: white;
+  width: 15%;
+  height: 41px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.row1 > .text > section > input::-webkit-inner-spin-button, .row1 > .text > section > input ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
