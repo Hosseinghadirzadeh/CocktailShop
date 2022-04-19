@@ -562,5 +562,64 @@ footer {
             min-height: 80vh;
         }
 
+        > section {
+            @extend .bt, .df, .FONT;
+            margin: 0 auto;
+            position: absolute;
+            width: 50%;
+            height: 350px;
+            align-content: flex-start;
+            transform: translate(50%, 50%);
+            color: white;
+            font-size: 19px;
+            > * {
+                width: 100%;
+                @extend .bt, .df;
+            }
+            .ftxt {
+                > * {
+                    width: 100%;
+                    @extend .bt, .df;
+                    padding: 10px;
+                    letter-spacing: 3px;
+                }
+            }
+            > figure {
+                padding: 20px;
+            }
+            ul {
+                padding: 10px;
+                @extend .bt, .df;
+                justify-content: space-evenly;
+                li {
+                    cursor: pointer;
+                    padding: 10px;
+                    @extend .bt, .df;
+                    position: relative;
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        height: 2px;
+                        width: 100%;
+                        background-color: $gcolor2;
+                        transition: transform 0.8s;
+                        transform-origin: right;
+                        transform: scaleX(0);
+                    }
+                    &:hover::before,
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                    &::before {
+                        bottom: 5px;
+                        transition: transform 0.3s;
+                    }
+                }
+            }
+        }
     }
 }

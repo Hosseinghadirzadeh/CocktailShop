@@ -14,11 +14,11 @@ li {
   list-style-type: none;
 }
 
-.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div, .row2, .row2-1, .row2-1 > ul, .row2-1 > ul > li, .row2-1 > ul > ul, .row2-2, .row2-2 > h2, .row2-2 > div, .row2-2 > div > article, .card > figure, .card > div {
+.bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div, .row2, .row2-1, .row2-1 > ul, .row2-1 > ul > li, .row2-1 > ul > ul, .row2-2, .row2-2 > h2, .row2-2 > div, .row2-2 > div > article, .card > figure, .card > div, footer .inner-footer > section, footer .inner-footer > section > *, footer .inner-footer > section .ftxt > *, footer .inner-footer > section ul, footer .inner-footer > section ul li {
   border: 1px solid red;
 }
 
-.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div, .row2-1 > ul, .row2-1 p, .row2-2 > div, .card > figure div, .card > div {
+.df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div, .row2-1 > ul, .row2-1 p, .row2-2 > div, .card > figure div, .card > div, footer .inner-footer > section, footer .inner-footer > section > *, footer .inner-footer > section .ftxt > *, footer .inner-footer > section ul, footer .inner-footer > section ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@ li {
       align-content: center;
 }
 
-.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc > div > p, .row2-1, .row2-1 p, .row2-2 > h2, .row2-2 > div > article {
+.FONT, .btn, header > nav > ul, main .main-top, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc > div > p, .row2-1, .row2-1 p, .row2-2 > h2, .row2-2 > div > article, footer .inner-footer > section {
   font-family: "Dancing Script", cursive;
   font-family: "Roboto Mono", monospace;
   font-family: "Satisfy", cursive;
@@ -590,5 +590,78 @@ footer .inner-footer {
 footer .inner-footer .liner {
   border: 1px solid #21221e;
   min-height: 80vh;
+}
+
+footer .inner-footer > section {
+  margin: 0 auto;
+  position: absolute;
+  width: 50%;
+  height: 350px;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  color: white;
+  font-size: 19px;
+}
+
+footer .inner-footer > section > * {
+  width: 100%;
+}
+
+footer .inner-footer > section .ftxt > * {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 3px;
+}
+
+footer .inner-footer > section > figure {
+  padding: 20px;
+}
+
+footer .inner-footer > section ul {
+  padding: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .inner-footer > section ul li {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+footer .inner-footer > section ul li::before, footer .inner-footer > section ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #c9ab81;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+footer .inner-footer > section ul li:hover::before, footer .inner-footer > section ul li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+footer .inner-footer > section ul li::before {
+  bottom: 5px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
