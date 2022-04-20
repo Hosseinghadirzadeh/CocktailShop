@@ -15,7 +15,7 @@ li {
 }
 
 .bt, header, header .logo, header > nav, header > nav > ul li, header > nav > section, header .menu, header .menu > section, main .main-top, main .main-top > p, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > *, .row1 > .text > div:nth-of-type(1) > h2, .row1 > .text > div:nth-of-type(1) > p:not(:nth-last-of-type(1)), .row1 > .text > div:nth-of-type(1) > p:nth-last-of-type(1), .row1 > .text .desc, .row1 > .text .desc > div, .row2, .row2-1, .row2-1 > ul, .row2-1 > ul > li, .row2-1 > ul > ul, .row2-2, .row2-2 > h2, .row2-2 > div, .row2-2 > div > article, .card > figure, .card > div, footer .inner-footer > section, footer .inner-footer > section > *, footer .inner-footer > section .ftxt > *, footer .inner-footer > section ul, footer .inner-footer > section ul li {
-  border: 1px solid red;
+  border: none;
 }
 
 .df, .btn, header, header .logo, header > nav > ul, header > nav > ul li, header > nav > section, header .menu, main .main-top, main .main-top > ul, .row1, .row1 > figure, .row1 > .text, .row1 > .text > section, .row1 > .text .desc, .row1 > .text .desc > div, .row2-1 > ul, .row2-1 p, .row2-2 > div, .card > figure div, .card > div, footer .inner-footer > section, footer .inner-footer > section > *, footer .inner-footer > section .ftxt > *, footer .inner-footer > section ul, footer .inner-footer > section ul li {

@@ -17,7 +17,7 @@ li {
     list-style-type: none;
 }
 
-$num: 1;
+$num:0;
 
 .bt {
     @if ($num==1) {
